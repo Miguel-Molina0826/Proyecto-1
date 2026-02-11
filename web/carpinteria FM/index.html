@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carpintería FM</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+    <h1>Carpintería FM</h1>
+    <p>Muebles a medida y trabajos en madera</p>
+
+    <div class="menu">
+        <button onclick="mostrarServicios()">Servicios</button>
+        <button onclick="mostrarProductos()">Productos</button>
+        <button onclick="mostrarContacto()">Contacto</button>
+    </div>
+
+    <p id="texto"></p>
+
+    <div id="productos" class="productos">
+        <div class="producto">
+            <img src="mesa.jpg" alt="Mesa de madera">
+            <h3>Mesa de madera</h3>
+            <p>$450.000</p>
+            <button class="btn-comprar"
+        onclick="comprar('Mesa de madera', '450000')">
+        Comprar
+    </button>
+        </div>
+
+        <div class="producto">
+            <img src="silla.jpg" alt="Silla de madera">
+            <h3>Silla de madera</h3>
+            <p>$120.000</p>
+            <button class="btn-comprar"
+    onclick="comprar('Silla de madera', '120000')">
+    Comprar
+</button>
+
+        </div>
+
+        <div class="producto">
+            <img src="armario.jpg" alt="Armario">
+            <h3>Armario</h3>
+            <p>$900.000</p>
+            <button class="btn-comprar"
+    onclick="comprar('Armario', '900000')">
+    Comprar
+</button>
+
+        </div>
+    </div>
+
+    <script>
+        function ocultarTodo() {
+            document.getElementById("texto").innerText = "";
+            document.getElementById("productos").style.display = "none";
+        }
+
+        function mostrarServicios() {
+            ocultarTodo();
+            document.getElementById("texto").innerText =
+                "Ofrecemos muebles a medida, puertas, closets, restauraciones y trabajos personalizados.";
+        }
+
+        function mostrarProductos() {
+            ocultarTodo();
+            document.getElementById("productos").style.display = "flex";
+        }
+
+        function mostrarContacto() {
+    ocultarTodo();
+    document.getElementById("texto").innerHTML = `
+        <strong>📞 WhatsApp:</strong> 3184151242 / 3246274427<br><br>
+        <strong>📧 Email:</strong> carpinteriafm05@gmail.com<br><br>
+        <strong>📸 Instagram:</strong>
+        <a href="https://www.instagram.com/carpinteriayrusticosfm/" target="_blank">
+            @carpinteriafm
+        </a>
+    `;
+}
+
+        
+        function comprar(producto, precio) {
+    const numero = "573184151242"; // tu WhatsApp con indicativo
+    const mensaje = `Hola, estoy interesado en el producto: ${producto}. Precio: $${precio}`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+}
+
+    </script>
+
+</body>
+</html>

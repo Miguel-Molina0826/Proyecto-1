@@ -1,0 +1,148 @@
+/* ====== ESTILOS GENERALES ====== */
+body {
+    background-color: #f4f1ec;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px 15px 20px 15px; /* top, right, bottom, left */
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+p {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu button {
+    background-color: #6b3e26;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: #8a5233;
+}
+
+.productos {
+    display: none; /* oculto por defecto, se muestra con JS */
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 6px;
+    height: auto;
+}
+
+.producto h3 {
+    margin: 10px 0 5px;
+    color: #6b3e26;
+}
+
+.producto p {
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-comprar {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-comprar:hover {
+    background-color: #1ebe5d;
+}
+
+/* ====== ESTILOS PARA CELULAR ====== */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu button {
+        width: 80%;
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .producto {
+        width: 90%;
+    }
+    body {
+    background-image: url('sierra\ fondo\ .jpg'); /* tu imagen */
+    background-size: cover; /* la imagen cubre toda la pantalla */
+    background-attachment: fixed; /* efecto parallax */
+    background-position: center top; /* posición inicial */
+    background-repeat: no-repeat;
+    background-color: #f4f1ec; /* color de respaldo si no carga la imagen */
+}
+
+}
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* móvil usa scroll normal */
+    }
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('sierra\ fondo\ .jpg') center top / cover no-repeat;
+    z-index: -1; /* detrás de todo */
+    transform: translateZ(0);
+}
+ body {
+  background: url("fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
