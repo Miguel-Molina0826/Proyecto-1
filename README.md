@@ -32,11 +32,23 @@ Operadores de Asignación
 | >=       | Mayor o igual     | 5 >= 5        |
 | <=       | Menor o igual     | 4 <= 6        |
 
+
+ Operadores Lógicos
+Los operadores lógicos permiten combinar condiciones y devuelven un valor booleano (true o false).
+
+| Operador | Nombre | Descripción | Ejemplo | Resultado |
+|----------|--------|-------------|----------|------------|
+| && | AND (Y) | Verdadero si ambas condiciones son verdaderas | 5 > 3 && 10 > 5 | true |
+| || | OR (O) | Verdadero si al menos una condición es verdadera | 5 > 10 || 10 > 5 | true |
+| ! | NOT (Negación) | Invierte el valor lógico | !(5 > 3) | false |
+
+
 Operador ternario 
 ```javascript
 let edad = 18;
 let mensaje = (edad >= 18) ? "Mayor de edad" : "Menor de edad";
 ```
+
 
 
 
